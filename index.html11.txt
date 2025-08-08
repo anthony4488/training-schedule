@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Training Schedule</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #3498db;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #e74c3c;
+            margin: 20px 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .session-card {
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .session-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-info {
+            background: #e8f5e8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .fly-target {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 5px 0;
+            font-weight: bold;
+            color: #856404;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        tr:hover {
+            background: #e3f2fd;
+            transition: background 0.3s ease;
+        }
+        
+        .phase {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .cancelled {
+            background: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #ef5350;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .week2-section {
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #ff9a56;
+        }
+        
+        .equipment-section {
+            background: linear-gradient(45deg, #d299c2, #fef9d7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid #fd79a8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏃‍♂️ Weekly Training Schedule 🏃‍♀️</h1>
+        
+        <div style="background: #e8f5e8; border: 3px solid #27ae60; border-radius: 10px; padding: 20px; margin-bottom: 30px;">
+            <h2 style="color: #27ae60; margin: 0 0 15px 0;">📋 COACHING TAKEAWAYS</h2>
+            <div style="font-size: 16px; line-height: 1.8;">
+                <p><strong>🎯 WHAT ARE 10M FLY TIMES?</strong><br>
+                During the 40m sprints, use your stopwatch to time just the middle 10m section (from the 20m mark to the 30m mark). This shows their top speed without the acceleration phase.</p>
+                
+                <p><strong>⏱️ HOW TO TIME:</strong><br>
+                1. Set up markers at 20m and 30m<br>
+                2. Start timing when they hit the 20m mark<br>
+                3. Stop timing when they hit the 30m mark<br>
+                4. Record this time - this is their "10m fly"</p>
+                
+                <p><strong>🏃‍♂️ WHAT IS BOUNDING?</strong><br>
+                Bounding = big jumping steps focusing on distance, not height. Think "leap, leap, leap" like a kangaroo. Each "bound" should cover the distance shown (e.g., 2.4m = each jump covers 2.4 meters).</p>
+                
+                <p><strong>📏 HOW TO SET UP BOUNDING:</strong><br>
+                1. Use a tape measure to mark out 7 cones at the spacing shown<br>
+                2. Athlete bounds from cone to cone (7 bounds total)<br>
+                3. Then sprints 25m to finish<br>
+                4. Rest well between attempts</p>
+                
+                <p><strong>📞 EMERGENCY CONTACT:</strong><br>
+                If you're unsure about anything, call the athletes' parents/guardians listed in each session.</p>
+                
+                <p><strong>🗣️ COACHING CUES & COMMUNICATION:</strong><br>
+                • <strong>OVER-COMMUNICATE:</strong> Explain everything multiple times - once is never enough!<br>
+                • <strong>Between each rep:</strong> Tell athlete what they did well and what to improve<br>
+                • <strong>Don't rush:</strong> Let athlete analyze themselves first, then add your feedback<br>
+                • <strong>Key cue for sprints:</strong> "Drive your foot down aggressively throughout the run!"<br>
+                • <strong>Warm-up is crucial:</strong> Explain every exercise and why they're doing it<br>
+                • <strong>Ask questions:</strong> "How did that feel?" "What can we improve?"</p>
+                
+                <p><strong>⏰ SESSION DURATION:</strong><br>
+                Each training session is designed to run approximately <strong>70-75 minutes</strong> total.</p>
+            </div>
+        </div>
+        
+        <h2>📅 SATURDAY 9/8</h2>
+        
+        <div class="session-card">
+            <h3>Session 1: 12:00PM - YOUNG ISAAC (Individual)</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> Isaac: 0424 641 528
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Target:</strong> Young Isaac: 1.49s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> Explain each stretch - why we do it, how it helps. Ask "Can you feel this in your hamstring?" Repeat instructions 2-3 times.</td></tr>
+                <tr><td class="phase">Top Speed</td><td><strong>ISAAC:</strong> Aiming for 1.49 10m fly<br>5x40m, 3.5 min recovery<br><br><strong>🗣️ COACHING:</strong> Between each rep: "How did that feel? What can we improve?" Key cue: "Drive your foot down aggressively!" Let Isaac analyze first, then give feedback. Don't rush!</td></tr>
+                <tr><td class="phase">Accelerations</td><td>5x accelerations over 10m, focus on explosive starts<br><br><strong>🗣️ COACHING:</strong> "Explode from the start, drive those feet down hard!" After each rep: discuss technique, don't move to next until form is good.</td></tr>
+                <tr><td class="phase">Bounding</td><td><strong>ISAAC:</strong> 1.9m spacing - 7 bounds + 25m sprint<br>4 attempts<br><br><strong>🗣️ COACHING:</strong> "Think kangaroo jumps - distance not height!" Show the technique multiple times. After each attempt: "What felt different that time?"</td></tr>
+            </table>
+        </div>
+
+        <h2>📅 SUNDAY 10/8</h2>
+        
+        <div class="session-card">
+            <h3>Session 2: 11:30AM - YOUNG ISAAC (Individual) - DISTANCE SPEED</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> 0424 641 528 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Target:</strong> Young Isaac: 1.49s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> Explain every stretch thoroughly. "This stretch helps your legs run faster." Ask questions: "Do you feel the stretch here?" Repeat 2-3 times.</td></tr>
+                <tr><td class="phase">Distance Speed</td><td>3x150m, 6 min recovery between EACH run<br>3x100m, 6 min recovery between EACH run<br>2x80m, 6 min recovery between EACH run<br><br><strong>🗣️ COACHING:</strong> "Maintain your speed the whole distance - drive feet down aggressively!" Between runs: "Rate that run 1-10, what made it feel that way?" Let Isaac rest and analyze before next rep.</td></tr>
+                <tr><td class="phase">Warm Down</td><td>Barefoot 400m: skip 20m→jog 20m pattern<br><br><strong>🗣️ COACHING:</strong> "Barefoot helps your feet get stronger. Feel the ground with each step." Explain why we cool down properly.</td></tr>
+                <tr><td class="phase">Notes</td><td>Isaac doing 2 sessions with Hais</td></tr>
+            </table>
+        </div>
+
+        <h2>📅 MONDAY 11/8</h2>
+        
+        <div class="session-card">
+            <h3>Session 3: 4:30PM - CASSIUS (Individual)</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> Father Mark: 0408 615 101 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Target:</strong> Cassius: 1.82s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "This jog gets your blood flowing." Explain each stretch - "Feel this in your hamstring." Repeat instructions 2-3 times. Don't rush!</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery between sprints<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Between each rep: "How did that feel? What can we improve?" Let Cassius analyze first, then give feedback.</td></tr>
+                <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m, 90-120 sec recovery per sprint<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" After each rep: discuss technique, check form before next attempt.</td></tr>
+                <tr><td class="phase">Movement Skills</td><td>3x10m each: backpedal→sprint, side shuffle right→sprint, side shuffle left→sprint, 3 reps each, 1 min between<br><br><strong>🗣️ COACHING:</strong> Show each movement multiple times. "Stay low when shuffling, then explode into the sprint!"</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Maintain speed the whole distance - no slowing down!" Between rounds: "Rate that effort 1-10."</td></tr>
+                <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick ground contact - like you're on hot coals!" Demonstrate the movement.</td></tr>
+            </table>
+        </div>
+
+        <div class="session-card">
+            <h3>Session 4: 5:50PM - GROUP (Ryan, Noah, Joseph, Zane)</h3>
+            <div class="contact-info">
+                <strong>Contacts:</strong> Ryan: 0490 142 559, Noah: 0422 034 337, Joseph: 0452 152 121, Zane: 0450 564 234 (father Aimon) | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Targets:</strong> Ryan: 1.18s | Noah: 1.11s | Joseph: 1.32s | Zane: 1.76s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're preparing for speed work." Explain every stretch. "Feel this stretch helping your legs." Ask "Can you feel it here?" Repeat 2-3 times.</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery, run in pairs<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Use pair motivation. Between reps: "How did that compare to your last one?" Let them analyze first.</td></tr>
+                <tr><td class="phase">Split Training</td><td><strong>NOAH/JOSEPH/ZANE:</strong> 8x15m acceleration, time first 10m, 90-120 sec recovery<br><strong>RYAN (if Joeys trials done):</strong> Bounding after every 2 accelerations, 4 attempts, 7 bounds at 2.6m + 25m sprint<br><br><strong>🗣️ COACHING:</strong> For acceleration: "Explosive start, drive down!" For bounding: "Distance not height - like a kangaroo!"</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down! Drive through to the end!" Check who's working hardest between rounds.</td></tr>
+                <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick feet, quick ground contact!" Make it fun - who can be quickest?</td></tr>
+            </table>
+        </div>
+
+        <div class="session-card">
+            <h3>Session 5: 7:10PM - MARCO (Individual)</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> 0434 934 906 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Target:</strong> Marco: 1.10s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're preparing for overspeed - faster than normal!" Explain why each stretch matters. Repeat instructions.</td></tr>
+                <tr><td class="phase">Overspeed</td><td>5x40m overspeed, full recovery between reps, focus on form at supramaximal speed<br><br><strong>🗣️ COACHING:</strong> "This is faster than you can normally run - stay relaxed!" Between reps: "How did that feel different?" Don't rush recovery.</td></tr>
+            </table>
+        </div>
+
+        <h2>📅 TUESDAY 12/8</h2>
+        
+        <div class="session-card">
+            <h3>Session 6: 5:00PM - GROUP (Xavi, Oscar, Marley, Ariana)</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> Father David: 0421 312 128 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Targets:</strong> Xavi: 1.19s | Oscar: 1.50s | Marley: 1.72s | Ariana: 1.79s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "This warm-up prevents injuries and makes you faster." Explain each stretch. "Feel this in your hamstring." Repeat 2-3 times for the group.</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery, run in pairs<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Use group energy. Between reps: "How did that feel? Compare to your last one."</td></tr>
+                <tr><td class="phase">Bounding</td><td><strong>MARLEY:</strong> 1.7m spacing + 25m run<br><strong>XAVI:</strong> 2.6m spacing + 25m run<br><strong>OSCAR:</strong> 2.0m spacing + 25m run<br><strong>ARIANA:</strong> 1.7m spacing + 25m run<br>4 attempts each<br><br><strong>🗣️ COACHING:</strong> "Distance not height - like kangaroo jumps!" Show technique multiple times. Set up different spacing carefully with tape measure.</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down! Drive through to the finish!" Motivate the group - who's working hardest?</td></tr>
+                <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick feet like you're on hot coals!" Make it competitive between group members.</td></tr>
+            </table>
+        </div>
+
+        <div class="session-card">
+            <h3>Session 8: 6:15PM - GROUP (Jess, Isaac - Adam's brother, Hugo)</h3>
+            <div class="contact-info">
+                <strong>Contacts:</strong> Jess - mother Kathryn: 0404 689 250, Isaac: 0424 641 528, Hugo - father Hugh: 0421 991 441 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Targets:</strong> Jess: 1.34s | Isaac (Adam's brother): 1.23s | Hugo: 1.52s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're getting your bodies ready for speed." Explain why we do each stretch. Ask "Can you feel this working?" Repeat instructions.</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery, run together<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Between reps: "Rate that effort 1-10, what made it feel that way?"</td></tr>
+                <tr><td class="phase">Split Training</td><td><strong>ISAAC & HUGO:</strong> Bounding - 7 bounds + 25m sprint (need spacing distances)<br><strong>JESS:</strong> 5 rounds of 5 double-legged jumps forward (nice and quick)<br>4 attempts each<br><br><strong>🗣️ COACHING:</strong> For bounding: "Distance jumps like a kangaroo!" For Jess: "Quick explosive jumps forward - like jumping over puddles!"</td></tr>
+                <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m, 90-120 sec recovery<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Check technique between each rep.</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Maintain speed the whole way - no giving up!" Encourage the group effort.</td></tr>
+                <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick ground contact - bounce, bounce, bounce!" Demonstrate the rhythm.</td></tr>
+            </table>
+        </div>
+
+        <h2>📅 WEDNESDAY 13/8</h2>
+        
+        <div class="session-card">
+            <h3>Session 8: 3:30PM - MAKSIM (Individual)</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> 0404 711 744 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Target:</strong> Maksim: 1.19s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "This prepares your body for fast work." Explain each stretch purpose. "This helps your hamstrings stretch for speed." Repeat instructions 2-3 times.</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery between sprints<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Between reps: "How did that feel? What can we improve?" Let Maksim analyze first.</td></tr>
+                <tr><td class="phase">Bounding</td><td>2.7m spacing (aiming for 2.8m) - 7 bounds + 25m sprint, 4 attempts<br><br><strong>🗣️ COACHING:</strong> "Distance not height - like kangaroo jumps!" "Try to hit that 2.8m target!" Show technique multiple times.</td></tr>
+                <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m, 90-120 sec recovery<br><br><strong>🗣️ COACHING:</strong> "Explosive start! Drive those feet down hard!" Check form between each rep - don't rush.</td></tr>
+                <tr><td class="phase">Movement Skills</td><td>3x10m each: backpedal→sprint, side shuffle right→sprint, side shuffle left→sprint, 3 reps each, 1 min between<br><br><strong>🗣️ COACHING:</strong> "Stay low, stay controlled, then explode!" Demonstrate each movement clearly.</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down! Maintain speed to the end!" Encourage between rounds.</td></tr>
+                <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick feet like on hot coals!" Demonstrate the bouncing rhythm.</td></tr>
+            </table>
+        </div>
+
+        <div class="session-card">
+            <h3>Session 9: 5:50PM - GROUP (Selena, Mohammed, Beau, Joseph)</h3>
+            <div class="contact-info">
+                <strong>Contacts:</strong> Selena: 0413 767 060 (Paulo), Mohammed: 0474 500 300, Beau: 0424 884 351 (father Sam), Joseph: 0452 152 121 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Targets:</strong> Selena: 1.49s | Mohammed: 1.19s | Beau: 1.27s | Joseph: 1.32s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "Get your muscles ready for hill work." Explain each stretch to the group. "This will help you run uphill better." Repeat multiple times.</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery, run in pairs<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Use group motivation. Between reps: "How did that compare to your last one?"</td></tr>
+                <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m, 90-120 sec recovery, stagger starts<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Stagger starts so everyone gets individual attention.</td></tr>
+                <tr><td class="phase">Uphill Work</td><td>5x45m uphill sprints, use tape measure for exact 45m, full recovery between reps<br><br><strong>🗣️ COACHING:</strong> "Drive with your arms and legs! Lean into the hill!" "This makes you stronger and faster!" Let them fully recover.</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "No giving up! Drive through to the finish!" Motivate the whole group effort.</td></tr>
+                <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick bouncing feet! Like on a trampoline!" Keep the group together.</td></tr>
+            </table>
+        </div>
+
+        <h2>📅 THURSDAY 14/8</h2>
+        
+        <div class="session-card">
+            <h3>Session 10: 5:40PM - JUNAID (Individual)</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> Father Wali: 0437 177 943 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Target:</strong> Junaid: 1.64s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "This gets your body ready for speed and hills." Explain each stretch purpose. "Feel this helping your legs." Repeat instructions.</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery between sprints<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Between reps: "How did that feel? What can we improve?" Let Junaid analyze.</td></tr>
+                <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m, 90-120 sec recovery<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Check technique between reps.</td></tr>
+                <tr><td class="phase">Uphill Work</td><td>5x45m uphill sprints, use tape measure for exact 45m, full recovery between reps<br><br><strong>🗣️ COACHING:</strong> "Drive with your arms! Lean into the hill!" "This builds your power!" Ensure full recovery.</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down! Maintain speed to the end!" Encourage each round.</td></tr>
+                <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick bouncing contact! Like on springs!" Demonstrate the rhythm.</td></tr>
+            </table>
+        </div>
+
+        <h2>📅 FRIDAY 15/8</h2>
+        
+        <div class="session-card">
+            <h3>Session 11: 5:20PM - ZIGGY & OLIVE (Pair)</h3>
+            <div class="contact-info">
+                <strong>Contact:</strong> Father Fred: 0424 736 836 | <strong>Duration:</strong> 70-75 minutes
+            </div>
+            <div class="fly-target">
+                🎯 <strong>10m Fly Targets:</strong> Ziggy: 1.35s | Olive: 1.40s
+            </div>
+            <table>
+                <tr><th class="phase">Phase</th><th>Details</th></tr>
+                <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're preparing for speed and hill work." Explain stretches to both athletes. "This prepares your muscles." Repeat instructions.</td></tr>
+                <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery, run together<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Between reps: "How did that feel? Compare to each other." Use pair motivation.</td></tr>
+                <tr><td class="phase">Bounding</td><td><strong>ZIGGY:</strong> 2.4m spacing - 7 bounds + 25m sprint<br><strong>OLIVE:</strong> 2.0m spacing - 7 bounds + 25m sprint<br>4 attempts each<br><br><strong>🗣️ COACHING:</strong> "Distance not height - like kangaroo jumps!" Set up different spacings carefully. Show technique to both.</td></tr>
+                <tr><td class="phase">Hill Work at Strathfield</td><td>6x65m uphill sprints, 3-4 min recovery between each rep<br><br><strong>🗣️ COACHING:</strong> "Drive with your arms! Lean into the hill!" "This makes you stronger!" Ensure full recovery - don't rush.</td></tr>
+                <tr><td class="phase">Movement Skills</td><td>3x10m each: backpedal→sprint, side shuffle right→sprint, side shuffle left→sprint, 3 reps each, 1 min between<br><br><strong>🗣️ COACHING:</strong> "Stay low, stay controlled, then explode!" Demonstrate each movement clearly.</td></tr>
+                <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down together! Push each other!" Use pair competition.</td></tr>
+                                    <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick feet like on trampolines!" Have them do it together.</td></tr>
+                </table>
+            </div>
+        </div>
+        </div>
+
+        <div class="equipment-section">
+            <h2>🏃‍♂️ EQUIPMENT NEEDED</h2>
+            <ul>
+                <li>Starting blocks</li>
+                <li>Tape measures</li>
+                <li>Cones for bounding (various spacings)</li>
+                <li>Stopwatch/timing equipment</li>
+                <li>Access to hills at Strathfield and Norman May Park</li>
+            </ul>
+        </div>
+
+        <div style="background: #ffe6e6; border: 2px solid #ff7675; border-radius: 8px; padding: 15px; margin: 20px 0;">
+            <h2>⚠️ MISSING BOUNDING SPACINGS NEEDED</h2>
+            <ul>
+                <li><strong>Isaac (Adam's brother)</strong> - Session 7 (Tuesday 6:15PM)</li>
+                <li><strong>Hugo</strong> - Session 7 (Tuesday 6:15PM)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+            </table>
+        </div>
+
+        <div class="week2-section">
+            <h2>🔄 WEEK 2 MODIFICATIONS</h2>
+            
+            <h3>📅 SATURDAY (Week 2) - 16/8</h3>
+            
+            <div class="session-card">
+                <h4>Session 12: 10:40AM - JESS, JAMES & RAMZI (Group)</h4>
+                <div class="contact-info">
+                    <strong>Contacts:</strong> Jess - mother Kathryn: 0404 689 250, James - mother Vicky: 0415 050 682, Ramzi - father Aza: 0410 324 141 | <strong>Duration:</strong> 70-75 minutes
+                </div>
+                <div class="fly-target">
+                    🎯 <strong>Bounding Targets:</strong> Ramzi: 2.2m | James: 2.9m | Jess: 2.4m
+                </div>
+                <table>
+                    <tr><th class="phase">Phase</th><th>Details</th></tr>
+                    <tr><td class="phase">Warm-Up</td><td>Jog full lap (together), hamstring & quad stretches, lunges, skip 3x30m (side by side), tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're working together today." Explain each stretch to the group. "This prepares you for speed work." Repeat instructions for all three athletes.</td></tr>
+                    <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), run together for motivation, 3.5 min recovery between each sprint, record times for all athletes<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Use group motivation. Between reps: "How did that compare to each other?" Record all times.</td></tr>
+                    <tr><td class="phase">Bounding</td><td><strong>RAMZI:</strong> 2.1m spacing (aiming for 2.2m) - 7 bounds + 25m sprint<br><strong>JAMES:</strong> 2.8m spacing (aiming for 2.9m) - 7 bounds + 25m sprint<br><strong>JESS:</strong> 2.3m spacing (aiming for 2.4m) - 7 bounds + 25m sprint<br>4 attempts each, set up separate cone lines<br><br><strong>🗣️ COACHING:</strong> "Distance not height - like kangaroo jumps!" Set up three separate courses. Challenge each athlete to hit their 0.1m improvement target.</td></tr>
+                    <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m of each sprint, 90-120 sec recovery per sprint, can alternate starts<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Can run together or alternate for individual attention.</td></tr>
+                    <tr><td class="phase">Conditioning</td><td>80m x 2 rounds only, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Just two rounds today - give maximum effort!" Use group competition.</td></tr>
+                    <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick bouncing feet together!" Group finishing exercise.</td></tr>
+                </table>
+            </div>
+            
+            <div class="session-card">
+                <h4>Session 13: 12:00PM - MARCO & ISAAC (Pair)</h4>
+                <div class="contact-info">
+                    <strong>Contacts:</strong> Marco: 0434 934 906, Isaac: 0424 641 528 | <strong>Duration:</strong> 70-75 minutes
+                </div>
+                <div class="fly-target">
+                    🎯 <strong>10m Fly Targets:</strong> Marco: 1.10s | Isaac: sub 1.5s<br>
+                    🎯 <strong>Bounding Targets:</strong> Marco: 3.4m | Isaac: 1.9m
+                </div>
+                <table>
+                    <tr><th class="phase">Phase</th><th>Details</th></tr>
+                    <tr><td class="phase">Warm-Up</td><td>Jog full lap (together), hamstring & quad stretches, lunges, skip 3x30m (side by side), tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're focusing on speed and power today." Explain stretches to both athletes. "This prepares you for fast work." Repeat instructions.</td></tr>
+                    <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), Marco aiming for 1.10 10m fly, Isaac aiming for sub 1.5 10m fly, 3.5 min recovery, record both times<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Focus on Marco hitting 1.10 target and Isaac achieving sub 1.5. Use pair competition.</td></tr>
+                    <tr><td class="phase">Accelerations</td><td>5x accelerations over 10m, focus on explosive starts, adequate recovery between reps<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Check technique between reps.</td></tr>
+                    <tr><td class="phase">Bounding</td><td><strong>MARCO:</strong> Current spacing (aiming for 3.4m bounds) - 7 bounds + 25m sprint<br><strong>ISAAC:</strong> 1.9m spacing - 7 bounds + 25m sprint<br>4 attempts each, set up separate cone lines<br><br><strong>🗣️ COACHING:</strong> "Distance not height - like kangaroo jumps!" Challenge Marco to reach 3.4m target. "No long conditioning today - focus on power!"</td></tr>
+                </table>
+            </div>
+            
+            <div class="session-card">
+                <h4>Session 14: 1:10PM - NOAH (Individual) - FULL CONDITIONING</h4>
+                <div class="contact-info">
+                    <strong>Contact:</strong> 0422 034 337 | <strong>Duration:</strong> 70-75 minutes
+                </div>
+                <table>
+                    <tr><th class="phase">Phase</th><th>Details</th></tr>
+                    <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're doing conditioning today - preparing your body for endurance." Explain each stretch thoroughly. "This will be challenging but make you stronger."</td></tr>
+                    <tr><td class="phase">Footwork Change of Direction</td><td>6x5m diagonal change of direction, 6 cones setup, 90 sec recovery between each rep, focus on quick feet and sharp cuts<br><br><strong>🗣️ COACHING:</strong> "Quick feet and sharp cuts! Stay low and controlled!" Demonstrate the diagonal pattern clearly.</td></tr>
+                    <tr><td class="phase">50m Shuttles</td><td>5x4 shuttles (200m total per set), aiming for under 45 seconds per set, 2.5 min break between sets, start: "3, 2, 1 - GO!", record all times<br><br><strong>🗣️ COACHING:</strong> "Under 45 seconds each set! Fight the slow down!" Monitor times closely and encourage between sets.</td></tr>
+                    <tr><td class="phase">Tempo Pace</td><td>4 minutes tempo pace x 3 rounds, moderate intensity sustained effort, recovery between rounds<br><br><strong>🗣️ COACHING:</strong> "Sustained moderate pace - not sprinting, not jogging!" Help Noah find the right rhythm.</td></tr>
+                    <tr><td class="phase">Warm Down</td><td>Barefoot skip and jog 400m: skip 20m → jog 20m pattern for full 400m<br><br><strong>🗣️ COACHING:</strong> "Barefoot helps your feet get stronger. Feel the ground with each step!" Explain the alternating pattern.</td></tr>
+                </table>
+            </div>
+            
+            <div class="session-card">
+                <h4>Session 15: 2:30PM - MOHAMMED (Individual)</h4>
+                <div class="contact-info">
+                    <strong>Contact:</strong> 0474 500 300 | <strong>Duration:</strong> 70-75 minutes
+                </div>
+                <div class="fly-target">
+                    🎯 <strong>Bounding Target:</strong> Mohammed: aiming for 2.9m (currently 2.8m)
+                </div>
+                <table>
+                    <tr><th class="phase">Phase</th><th>Details</th></tr>
+                    <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're doing block starts today." Explain each stretch and why it helps with explosive starts. "This prepares your legs for power."</td></tr>
+                    <tr><td class="phase">Block Starts</td><td>7x20m from blocks, stand on top of blocks for start position, time each 20m sprint, full recovery between reps<br><br><strong>🗣️ COACHING:</strong> "Explosive start from the blocks! Drive your legs hard!" Set up blocks properly and focus on technique. Record all times.</td></tr>
+                    <tr><td class="phase">Bounding</td><td>2.8m spacing (aiming for 2.9m goal) - 7 bounds + 25m sprint, 4 attempts, challenge to hit 2.9m target<br><br><strong>🗣️ COACHING:</strong> "Distance not height - aim for that 2.9m target!" Show technique and encourage the extra 0.1m improvement.</td></tr>
+                    <tr><td class="phase">Hill Tempo</td><td>5x65m uphill at max speed, full recovery between reps, focus on maintaining speed uphill<br><br><strong>🗣️ COACHING:</strong> "Drive with your arms and legs! Lean into the hill!" Ensure adequate hill gradient and full recovery.</td></tr>
+                </table>
+            </div>
+            
+            <h3>📅 SUNDAY (Week 2) - 17/8</h3>
+            
+            <div class="session-card">
+                <h4>Session 16: 11:30AM - ISAAC (Individual) - SUNDAY</h4>
+                <div class="contact-info">
+                    <strong>Contact:</strong> 0424 641 528 | <strong>Duration:</strong> 70-75 minutes
+                </div>
+                <div class="fly-target">
+                    🎯 <strong>10m Fly Target:</strong> Isaac: 1.49s
+                </div>
+                <table>
+                    <tr><th class="phase">Phase</th><th>Details</th></tr>
+                    <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're focusing on speed and movement today." Explain each stretch and purpose. "This prepares your muscles for fast work." Repeat instructions.</td></tr>
+                    <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery between each sprint, focus on maximum effort and form<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Between reps: "How did that feel? What can we improve?" Record times for progression.</td></tr>
+                    <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m of each sprint, 90-120 sec recovery per sprint, focus on explosive starts<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Check technique between each rep.</td></tr>
+                    <tr><td class="phase">Movement Skills</td><td>3x10m each: backpedal→sprint, side shuffle right→sprint, side shuffle left→sprint, 3 reps each, 1 min between<br><br><strong>🗣️ COACHING:</strong> "Stay low, stay controlled, then explode!" Demonstrate each movement clearly.</td></tr>
+                    <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery between rounds<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down! Maintain speed to the end!" Encourage each round.</td></tr>
+                    <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on, focus on quick ground contact<br><br><strong>🗣️ COACHING:</strong> "Quick bouncing feet like on springs!" Demonstrate the rhythm.</td></tr>
+                </table>
+            </div>
+            
+            <h3>📅 MONDAY (Week 2) - 18/8</h3>
+            
+            <div class="session-card">
+                <h4>Session 17: 5:50PM - GROUP (Ryan, Noah, Joseph, Zane) - NO MARCO</h4>
+                <div class="contact-info">
+                    <strong>Contacts:</strong> Ryan: 0490 142 559, Noah: 0422 034 337, Joseph: 0452 152 121, Zane: 0450 564 234 (father Aimon) | <strong>Duration:</strong> 70-75 minutes
+                </div>
+                <div class="fly-target">
+                    🎯 <strong>10m Fly Targets:</strong> Ryan: 1.18s | Noah: 1.11s | Joseph: 1.32s | Zane: 1.76s
+                </div>
+                <table>
+                    <tr><th class="phase">Phase</th><th>Details</th></tr>
+                    <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're preparing for speed and hill work." Explain to the group why each stretch matters. Repeat instructions multiple times.</td></tr>
+                    <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery, run in pairs<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Use group motivation. Between reps: "How did that feel compared to last week?"</td></tr>
+                    <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m, 90-120 sec recovery, stagger starts<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Check each athlete's technique.</td></tr>
+                    <tr><td class="phase">Hill Work</td><td>5x45m uphill sprints, use tape measure for exact 45m, full recovery between reps<br><br><strong>🗣️ COACHING:</strong> "Drive with your arms! Lean into the hill!" "This replaces bounding to make you stronger!" Full recovery between reps.</td></tr>
+                    <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down! Drive through together!" Use group competition.</td></tr>
+                    <tr><td class="phase">Ankle Finisher</td><td>4x40 pogo jumps, keep boots on<br><br><strong>🗣️ COACHING:</strong> "Quick feet like on hot coals!" Keep the group together.</td></tr>
+                </table>
+            </div>
+
+            <div class="cancelled">
+                <h4>Session 18: 7:10PM - MARCO</h4>
+                <strong>CANCELLED - Marco not training this Monday</strong>
+            </div>
+            
+            <h3>📅 TUESDAY (Week 2) - 19/8</h3>
+            
+            <div class="session-card">
+                <h4>Session 19: 3:50PM - ZALIYAH & KENITAH (Pair) - HILL WORK</h4>
+                <div class="contact-info">
+                    <strong>Contact:</strong> Mother Breahn: 0438 605 584 | <strong>Duration:</strong> 70-75 minutes
+                </div>
+                <div class="fly-target">
+                    🎯 <strong>10m Fly Targets:</strong> Zaliyah: 1.52s | Kenitah: 1.27s
+                </div>
+                <table>
+                    <tr><th class="phase">Phase</th><th>Details</th></tr>
+                    <tr><td class="phase">Warm-Up</td><td>Jog full lap, hamstring & quad stretches, lunges, skip 3x30m, tempo 3x40m, 2 min break<br><br><strong>🗣️ COACHING:</strong> "We're preparing for speed and hill work today." Explain each stretch to both sisters. "This helps your legs for running." Repeat instructions.</td></tr>
+                    <tr><td class="phase">Top Speed</td><td>5x40m (measuring at 20-30m), 3.5 min recovery, run together<br><br><strong>🗣️ COACHING:</strong> "Drive your foot down aggressively throughout the run!" Between reps: "How did that feel? What can we improve?" Use sister motivation.</td></tr>
+                    <tr><td class="phase">Hill Work</td><td>5x45m uphill sprints, use tape measure for exact 45m, full recovery between reps<br><br><strong>🗣️ COACHING:</strong> "Drive with your arms! Lean into the hill!" "This replaces bounding - makes you stronger!" Ensure full recovery.</td></tr>
+                    <tr><td class="phase">Acceleration</td><td>8x15m, time first 10m, 90-120 sec recovery<br><br><strong>🗣️ COACHING:</strong> "Explode from the start! Drive those feet down hard!" Check both athletes' technique.</td></tr>
+                    <tr><td class="phase">Movement Skills</td><td>3x10m each: backpedal→sprint, side shuffle right→sprint, side shuffle left→sprint, 3 reps each, 1 min between<br><br><strong>🗣️ COACHING:</strong> "Stay low, stay controlled, then explode!" Demonstrate each movement clearly.</td></tr>
+                    <tr><td class="phase">Conditioning</td><td>80m x 4 rounds, walk back recovery<br><br><strong>🗣️ COACHING:</strong> "Fight the slow down together! Push each other!" Use pair competition.</td></tr>
+                    <tr><td class="
